@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import GUN from 'gun/gun'
 const gun = GUN(['https://relay.peer.ooo/gun'])
 
-const redName = '000'
-const blueName = 'fff'
+const redName = '#696969'
+const blueName = '#808080'
 
 const Button = styled.div`
     padding: 0.5rem 0;
