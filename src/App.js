@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import GUN from 'gun/gun'
 const gun = GUN(['https://relay.peer.ooo/gun'])
 
-const redName = 'c41e3a'
-const blueName = '1da1f2'
+const redName = '000'
+const blueName = 'fff'
 
 const Button = styled.div`
     padding: 0.5rem 0;
@@ -77,11 +77,16 @@ function App() {
 
     const voteRed = () => {
         if (!loaded.current.red) return
-        redVotesRef.put(redVotes + 1)
+        return redVotesRef.once((data) => {
+            redVotesRef.put(data + 1)
+        })
     }
+
     const voteBlue = () => {
         if (!loaded.current.blue) return
-        blueVotesRef.put(blueVotes + 1)
+        return blueVotesRef.once((data) => {
+            blueVotesRef.put(data + 1)
+        })
     }
 
     return (
