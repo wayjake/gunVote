@@ -8,10 +8,9 @@ const blueName = 'fff'
 
 const Button = styled.div`
     padding: 0.5rem 0;
-    padding-top: 2rem;
+    padding-top: 5rem;
     margin: 0.5rem 1rem;
     width: 11rem;
-    color: #777;
     border-radius: 10px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
         rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -19,9 +18,24 @@ const Button = styled.div`
     text-align: center;
     vertical-align: middle;
     border: #777 solid 2px;
-    height: 42px;
+    height: 6rem;
     font-weight: 800;
     cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+
+    &:hover {
+        animation: createBox 0.25s;
+    }
+
+    @keyframes createBox {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.01);
+        }
+    }
 `
 
 const TopBar = styled.div`
