@@ -6,6 +6,7 @@ const gun = GUN(['https://relay.peer.ooo/gun'])
 const redName = '#696969'
 const blueName = '#808080'
 
+//@todo pass the color in as props for the buttons
 const Button = styled.div`
     padding: 0.5rem 0;
     padding-top: 5rem;
@@ -111,6 +112,14 @@ function App() {
                 </Item>
                 <Item>
                     {blueName}-Votes: {blueVotes || 'NA'}
+                </Item>
+                <Item>
+                    <a
+                        href="https://github.com/wayjake/gunVote"
+                        target="_blank"
+                    >
+                        Contribute
+                    </a>
                 </Item>
             </TopBar>
 
